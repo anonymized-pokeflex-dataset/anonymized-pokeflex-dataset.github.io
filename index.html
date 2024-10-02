@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PokeFlex: Towards a Real-World Dataset of Deformable Objects for Robotic Manipulation.">
+  <meta name="keywords" content="Deformable Objects, Dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> PokeFlex: Towards a Real-World Dataset of Deformable Objects for Robotic Manipulation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/bulma-carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="./static/css/bulma-slider.min.css"> -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- <script src="./static/js/bulma-carousel.min.js"></script> -->
+  <!-- <script src="./static/js/bulma-slider.min.js"></script> -->
+  <!-- <script src="./static/js/index.js"></script> -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+  
+  <style>
+    .container-mesh {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    .responsive-iframe-mesh {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PokeFlex: A Real-World Dataset of Deformable Objects for Robotics</h1>          
+
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <div style="width: 100%; justify-content: center; align-items: center; margin: auto; text-align: center;">
+          <img src="./static/gifs/dice_poke_v2.gif" style="width:47.5%; object-fit: cover; object-position: center ;" />
+          <img src="./static/gifs/dice-unscreen_v2.gif" style="width:47.5%; object-fit: cover; object-position: center ;" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <div style="width: 100%; justify-content: center; align-items: center; margin: auto; text-align: center;">
+          <img src="./static/images/objects.png" style="width:100%; object-fit: cover; object-position: bottom ;" />
+
+          <img src="./static/gifs/octopus-unscreen.gif" style="width:19.5%; object-fit: cover; object-position: bottom ;" />
+          <img src="./static/gifs/paper2-unscreen.gif" style="width:19.5%; object-fit: cover; object-position: bottom ;" />
+          <img src="./static/gifs/duvet-2--unscreen.gif" style="width:19.5%; object-fit: cover; object-position: bottom ;" />
+          <img src="./static/gifs/dice-unscreen_v2.gif" style="width:19.5%; object-fit: cover; object-position: bottom ;" />
+          <img src="./static/gifs/couch2-unscreen.gif" style="width:19.5%; object-fit: cover; object-position: bottom ;" />
+      </div>
+
+      <h2 class="subtitle has-text-centered">
+        PokeFlex is a dataset containing 3D mesh models of deformable objects.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Data-driven methods have shown great potential in solving challenging manipulation tasks, however, their application in the domain of deformable objects has been constrained, in part, by the lack of data. To address this, we propose PokeFlex, a dataset featuring real-world paired and annotated multimodal data that includes 3D textured meshes, point clouds, RGB images, and depth maps. Such data can be leveraged for several downstream tasks such as online 3D mesh reconstruction
+and it can potentially enable underexplored applications such as the real-world deployment of traditional control methods based on mesh simulations. To deal with the challenges posed by real-world 3D mesh reconstruction, we leverage a professional volumetric capture system that allows complete 360° reconstruction. PokeFlex consists of 18 deformable objects with varying stiffness and shapes. Deformations are generated by dropping objects onto a flat surface or by poking the objects with a robot arm. Interaction forces and torques are also reported for the latter case. 
+Using different data modalities, we demonstrated a use case for the PokeFlex dataset in online 3D mesh reconstruction. We refer the reader to our website or the supplementary material for demos and examples of our dataset.
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!--div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe id=sup_video src="static/videos/pokeflex.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div-->   
+    
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <div class="columns is-centered">
+    <div class="column has-text-centered">
+
+        <h2 class="title is-3">Interactive Visualization</h2>   
+        <div class="container-mesh">      
+            <iframe class="responsive-iframe-mesh" src="./static/reconstructions/mesh_animation_m1_div.html" allow="autoplay;" ></iframe>                  
+        </div>
+        
+        <div class="content has-text-justified">          
+          <p>
+          <ul>
+              <li>The plot on the left illustrates the 3D mesh reconstructed using a professional volumetric capture system for a toilet paper roll.
+              The dotted red line donotes the trajectory of the robot's end-effector executing a poking strategy.</li>
+              <li>The plot on the right shows the magnitud of the force applied by the end effector on the toilet paper roll. </li>
+          </ul>
+ 
+          
+          </p>
+          <p>
+          Notes:
+          <ul>
+              <li>Feel free to rotate the 3D mesh on the left.</li>
+              <li>The visualization might take some time load.</li>
+              <li>Consider pressing the Stop button and then pressing the Play button again, if playback is slow.</li>
+              <li>On mobile devices consider using landscape mode (Rotate your device).</li>
+          </ul>
+          </p>
+        </div>        
+        
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{team2025pokeflex,
+  author    = {The PokeFlex Dataset Team},
+  title     = {PokeFlex: A Real-World Dataset of Deformable Objects for Robotics},
+  journal   = {Under review as a conference paper at ICLR 2025},
+  year      = {2024}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      The website source code design was adapted from <a href="https://nerfies.github.io" class="external-link"><span
+        class="dnerf">Nerfies</span></a>.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
